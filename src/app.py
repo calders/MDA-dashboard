@@ -7,6 +7,7 @@ from secondtab import register_callbacks  # recognise the @app functions
 from firsttab import  register_callbacks_for_first_tab
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ],  suppress_callback_exceptions=True)
+server = app.server
 
 app.layout = html.Div([
     dbc.Container([

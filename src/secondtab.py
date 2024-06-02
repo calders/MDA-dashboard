@@ -110,7 +110,7 @@ def layout():
     ])
 
 # Load Stijns model
-model1 = load('data/stijnknnl.pkl')
+model1 = load('../data/stijnknnl.pkl')
 
 
 # The interaction for KNN

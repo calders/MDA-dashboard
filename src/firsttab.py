@@ -116,14 +116,14 @@ def update_choropleth(selected_variable):
 #
 
 # Aron's work
-geojson_data = json.loads(
-    requests.get('https://raw.githubusercontent.com/calders/MDA/dev-Aron/data/02_intermediate/muni_for_viz.json').text)
+with open('../data/muni_for_viz.json') as f:
+    geojson_data = json.load(f)
 
-permanence_points = json.loads(requests.get(
-    'https://raw.githubusercontent.com/calders/MDA/dev-Aron/data/02_intermediate/permanence_points.json').text)
+with open('../data/permanence_points.json') as f:
+    permanence_points = json.load(f)
 
 # Read local data
-df1 = pd.read_csv('data/data_dashboard.csv')
+df1 = pd.read_csv('../data/data_dashboard.csv')
 # df2 = pd.read_csv('data/data_choropleth')
 # //////////////////////// trying out
 # Convert 'time0' column to datetime if it's not already
